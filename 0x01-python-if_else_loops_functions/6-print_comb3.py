@@ -12,5 +12,5 @@ for i in range(0, 9):
             # If last pair, print the second digit with newline
             print("{:d}".format(j), end='\n')
         else:
-            # If not the last pair, print the second digit with a comma and space
+            # else, print the second digit with a comma and space
             print("{:d}".format(j), end=', ')
