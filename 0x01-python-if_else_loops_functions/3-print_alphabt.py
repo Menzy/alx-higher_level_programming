@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 
-# Loop through ASCII values for lowercase letters
-for character in range(97, 123):
-    # Check if the current character is 'e' or 'q'
-    if character == 101 or character == 113:
-        # Skip printing 'e' and 'q'
+# Iterate through the ASCII values of lowercase letters
+for i in range(97, 123):
+    # Check if the current ASCII value corresponds to 'e' or 'q'
+    if i == 101 or i == 113:
+        # If 'e' or 'q', skip to the next iteration
+        i += 1
         continue
-    # Print the current character
-    print("{:c}".format(character), end='')
+    else:
+        # Print the current lowercase letter
+        print('{}'.format(chr(i)), end='')

@@ -10,7 +10,7 @@ def uppercase(str):
         if a >= 97 and a <= 123:
             # Convert the lowercase letter to uppercase by subtracting 32
             a = a - 32
-        
+
         # Print the character (either as is or converted to uppercase)
         print("{}".format(chr(a)), end='')
 
