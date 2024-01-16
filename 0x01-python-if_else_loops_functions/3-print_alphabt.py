@@ -1,4 +1,10 @@
 #!/usr/bin/python3
-for letter in range(ord('a'), ord('z') + 1):
-    if chr(letter) not in ('q', 'e'):
-        print(chr(letter), end='')
+
+# Loop through ASCII values for lowercase letters
+for character in range(97, 123):
+    # Check if the current character is 'e' or 'q'
+    if character == 101 or character == 113:
+        # Skip printing 'e' and 'q'
+        continue
+    # Print the current character
+    print("{:c}".format(character), end='')

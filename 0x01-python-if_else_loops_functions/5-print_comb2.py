@@ -1,3 +1,11 @@
 #!/usr/bin/python3
-for number in range(100):
-    print("{:02d}".format(number), end=', ' if number < 99 else '\n')
+
+# Loop through the range of numbers from 0 to 99
+for num in range(0, 100):
+    # Check if the current number is 99
+    if num == 99:
+        # If it's the last number, print with a newline
+        print("{:02d}".format(num), end='\n')
+    else:
+        # If it's not the last number, print with a comma and space
+        print("{:02d}".format(num), end=', ')
