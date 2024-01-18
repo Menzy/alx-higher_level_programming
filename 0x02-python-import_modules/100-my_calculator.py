@@ -1,47 +1,30 @@
 #!/usr/bin/python3
+
 if __name__ == "__main__":
-    from sys import argv
-    from calculator_1 import *
+    import sys
 
-    argument_count = len(argv)
-
-    if argument_count != 4:
-        print("Usage: {} <num1> <operator> <num2>".format(argv[0]))
+    if len(sys.argv) != 4:
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
 
-    num1 = int(argv[1])
-    num2 = int(argv[3])
-    operator = argv[2]
+    a = int(sys.argv[1])
+    operator = sys.argv[2]
+    b = int(sys.argv[3])
 
-    def handle_unknown_operator():
+    if operator not in ['+', '-', '*', '/']:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
 
-    def perform_addition():
-        total = add(num1, num2)
-        print("{:d} + {:d} = {:d}".format(num1, num2, total))
-        return total
+    if operator == '+':
+        result = a + b
+    elif operator == '-':
+        result = a - b
+    elif operator == '*':
+        result = a * b
+    elif operator == '/':
+        if b == 0:
+            print("Error: Division by zero.")
+            exit(1)
+        result = a / b
 
-    def perform_subtraction():
-        total = subtract(num1, num2)
-        print("{:d} - {:d} = {:d}".format(num1, num2, total))
-        return total
-
-    def perform_multiplication():
-        total = multiply(num1, num2)
-        print("{:d} * {:d} = {:d}".format(num1, num2, total))
-        return total
-
-    def perform_division():
-        total = divide(num1, num2)
-        print("{:d} / {:d} = {:d}".format(num1, num2, total))
-        return total
-
-    operations = {
-        "+": perform_addition,
-        "-": perform_subtraction,
-        "*": perform_multiplication,
-        "/": perform_division
-    }
-
-    operations.get(operator, handle_unknown_operator)()
+    print(f"{a} {operator} {b} = {result}")
