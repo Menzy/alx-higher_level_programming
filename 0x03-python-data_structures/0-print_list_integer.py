@@ -2,10 +2,11 @@
 
 def print_list_integer(my_list=[]):
     """
-    Prints each integer in the provided list.
+    Prints all integers of a list, one integer per line.
 
     Parameters:
-        my_list (list): List of integers to be printed
+        my_list (list): The input list containing integers.
     """
-    for num in my_list:
-        print("{:d}".format(num))
+    for num in range(len(my_list)):
+        # Print each integer using the index
+        print("{:d}".format(my_list[num]))
