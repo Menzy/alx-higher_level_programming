@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def square_matrix_map(matrix=[]):
-    # Check if the input matrix is empty
+    # Check if the input matrix is empty.
     if not matrix:
         return []
 
