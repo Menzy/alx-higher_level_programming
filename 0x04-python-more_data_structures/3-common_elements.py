@@ -1,8 +1,17 @@
 #!/usr/bin/python3
 
 def common_elements(set_1, set_2):
-    # Calculate the intersection of set_1 and set_2
-    intersection = set_1.intersection(set_2)
+    # Initialize an empty list to store common elements
+    _set = []
 
-    # Return the set of common elements
-    return intersection
+    # Iterate through elements in set_1
+    for y in set_1:
+        # Iterate through elements in set_2
+        for x in set_2:
+            # Check if the current elements are equal (common element)
+            if y == x:
+                # Append the common element to the list
+                _set.append(y)
+
+    # Return the list of common elements
+    return _set
