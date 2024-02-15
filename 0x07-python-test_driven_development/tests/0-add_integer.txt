@@ -1,0 +1,18 @@
+>>> add_integer(1, 2)
+3
+>>> add_integer(1.0, 2)
+3
+>>> add_integer(1, 2.0)
+3
+>>> add_integer(1.0, 2.0)
+3
+>>> add_integer(1, 98)
+99
+>>> add_integer(1)
+99
+>>> add_integer(1.0)
+99
+>>> add_integer(1, 'a')
+Traceback (most recent call last):
+	...
+TypeError: Both parameters must be integers or floats.

@@ -1,0 +1,30 @@
+>>> text_indentation("This is a test.")
+This is a test.
+
+>>> text_indentation("This is a test. Another test.")
+This is a test.
+
+Another test.
+
+>>> text_indentation("This is a test. Another test? Yes, another test!")
+This is a test.
+
+Another test?
+
+Yes, another test!
+
+>>> text_indentation("This is a test. Another test? Yes, another test! Last test: okay.")
+This is a test.
+
+Another test?
+
+Yes, another test!
+
+Last test: okay.
+
+>>> text_indentation("No punctuation here")
+No punctuation here
+>>> text_indentation(123)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
